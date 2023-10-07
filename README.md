@@ -1,4 +1,4 @@
 # INTELOPER 27015
 
-is a game based on the inteloper arg
+it is a game based on the inteloper arg
 
