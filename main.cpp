@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     SDL_Renderer* renderer=nullptr;
     bool is_running=true;
     //defines the window 
-    window = SDL_CreateWindow("SDL Templete",
+    window = SDL_CreateWindow(WINDOW_NAME,
 		    0,
 		    0,
 		    WIDTH*PIXEL_SIZE,
