@@ -1,5 +1,7 @@
 #include "game.h"
+#include "../texture_manager/texture_manager.cpp"
 
+SDL_Texture *tex;
 game::game(int x, int y, int w, int h, char* name ,int pixel_size)
 {
         //making the window 
@@ -22,6 +24,10 @@ game::game(int x, int y, int w, int h, char* name ,int pixel_size)
    
     SDL_RenderSetScale(renderer,pixel_size,pixel_size);
     is_runnig=true;
+    texture_manager tex_man; 
+    tex=tex_man.load_texture("test_texture.png",renderer);
+    std::cout<<tex<<'\n'; 
+   
 };
 
 game::~game()
@@ -53,12 +59,17 @@ void game::handleEvents()
 
 void game::update()
 {
-
+  
 };
 
 void game::render()
 {
+ // SDL_Texture *tex;
+  //tex=texture_manager::load_texture("../assets/test_texture.png",renderer);
   SDL_RenderClear(renderer);
+
+  SDL_RenderCopy(renderer,tex,nullptr,nullptr);
+
   //place to put the rendering code
   SDL_RenderPresent(renderer);
 };

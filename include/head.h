@@ -6,12 +6,12 @@
 #include<SDL2/SDL_image.h>
 //my stuff
 
-#include "texture_manager/texture_manager.cpp"
+//#include "texture_manager/texture_manager.cpp"
 #include "game/game.cpp"
 
 //width and heigth of the window
-const int WIDTH=170;
-const int HEIGTH=128;
+const int WIDTH=64;
+const int HEIGTH=64;
 
 //pixel size
 //TODO:diffrent pixel sizes 
