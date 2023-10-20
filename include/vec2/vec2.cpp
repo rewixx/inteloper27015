@@ -15,7 +15,7 @@ vec2<T>::vec2(const T _x,const T _y)
 template <typename T>
 vec2<T>::vec2(const vec2<T>& a)
 {
-    this->x=x.a,this->y=y.a;
+    this->x=a.x,this->y=a.x;
 };
 
 template <typename T>
@@ -77,7 +77,7 @@ T vec2<T>::dot(const vec2<T>& a )
 template <typename T>
 T vec2<T>::angle()
 {
-    return atan2(vector.y, vector.x);
+    return atan2(this->y, this->x);
 };
 
 template <typename T>

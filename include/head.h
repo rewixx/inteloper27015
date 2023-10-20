@@ -6,9 +6,7 @@
 #include<SDL2/SDL_image.h>
 //my stuff
 
-//#include "texture_manager/texture_manager.cpp"
-#include "game/game.cpp"
-
+#include "texture_manager/texture_manager.cpp"
 //width and heigth of the window
 const int WIDTH=64;
 const int HEIGTH=64;

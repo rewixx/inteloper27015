@@ -8,7 +8,7 @@ void render(SDL_Renderer* renderer)
 	  SDL_RenderPresent(renderer);
 };
 
-int main(int argc, char* argv[])
+int main()
 {   
     //making the window 
     //dose the init work??
@@ -32,8 +32,8 @@ int main(int argc, char* argv[])
     SDL_RenderSetScale(renderer,PIXEL_SIZE,PIXEL_SIZE);
 
     // the GAMELOOP :
-    
     tex=texture_manager::load_texture("include/assets/test_texture.png",renderer);
+
     while(is_running){
     SDL_Event event;
 
