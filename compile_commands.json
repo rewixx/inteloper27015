@@ -90,11 +90,11 @@
       "-x",
       "c++",
       "-o",
-      "/tmp/main-89a637.o",
+      "/tmp/main-efae8e.o",
       "main.cpp"
     ],
     "directory": "/home/rob/cpp/inteloper27015",
     "file": "/home/rob/cpp/inteloper27015/main.cpp",
-    "output": "/tmp/main-89a637.o"
+    "output": "/tmp/main-efae8e.o"
   }
 ]

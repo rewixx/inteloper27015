@@ -7,6 +7,7 @@
 //my stuff
 
 #include "texture_manager/texture_manager.cpp"
+#include "sprite/sprite.cpp"
 //width and heigth of the window
 const int WIDTH=64;
 const int HEIGTH=64;
