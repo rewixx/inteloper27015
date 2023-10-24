@@ -1,5 +1,6 @@
 #include "include/head.h"
 //TODO: MAKE main LOOK BETTER
+sprite* spri = new sprite(0,5,32,32);
 
 int main()
 {   
@@ -24,15 +25,16 @@ int main()
    
     SDL_RenderSetScale(renderer,PIXEL_SIZE,PIXEL_SIZE);
     
-    SDL_Texture *tex;
-    sprite* spri = new sprite(0,5,32,32);
     // the GAMELOOP :
-    tex=texture_manager::load_texture("include/assets/test_texture.png",renderer);
     
-    spri->load_texture(renderer,tex);
+    spri->load_texture(renderer,"include/assets/test_texture.png");
 
     while(is_running){
     SDL_Event event;
+
+//    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+ //   SDL_RenderClear(renderer);
+     SDL_RenderClear(renderer);
 
     
      while(SDL_PollEvent(&event)){
@@ -42,13 +44,10 @@ int main()
 		      is_running=false;
 	     };
 	  };
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    SDL_RenderClear(renderer);
-
     spri->render(renderer);
 
 	  SDL_RenderPresent(renderer);
-    
+
     };
     
     

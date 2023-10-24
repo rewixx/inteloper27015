@@ -13,7 +13,7 @@ class sprite
 
   public:
    sprite(int x,int y,int w,int h);
-   void load_texture(SDL_Renderer* renderer,SDL_Texture* tex);
+   void load_texture(SDL_Renderer* renderer, const char* filename);
    void render(SDL_Renderer* renderer);
 
    ~sprite();

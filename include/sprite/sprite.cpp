@@ -19,14 +19,12 @@ sprite::~sprite()
   SDL_DestroyTexture(m_texture);
 };
 
-void sprite::load_texture(SDL_Renderer *renderer, SDL_Texture *tex)
+void sprite::load_texture(SDL_Renderer *renderer, const char* filename)
 {
-  SDL_SetRenderTarget(renderer, this->m_texture);
-  SDL_RenderCopy(renderer, tex, NULL, NULL);
-  SDL_SetRenderTarget(renderer, NULL);
+  texture_manager::load_texture(filename,renderer);
 };
 
 void sprite::render(SDL_Renderer* renderer)
 {
-     SDL_RenderCopy(renderer, this->m_texture, NULL, this->m_box); 
+  texture_manager::Draw(this->m_texture,this->m_box,renderer);
 };
